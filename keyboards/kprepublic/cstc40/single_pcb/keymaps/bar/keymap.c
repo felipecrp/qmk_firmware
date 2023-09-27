@@ -38,11 +38,11 @@ enum __layers {
 #define MRS_C MT(MOD_RGUI, KC_SCLN)
 
 // Layers
-#define LMO_NUM LT(KBAR_NUM, KC_TAB)
-#define LMO_NAV LT(KBAR_NAV, KC_SPC)
 #define LMO_FUN LT(KBAR_FUN, KC_ESC)
-#define LMO_SYM LT(KBAR_SYM, KC_BSPC)
-#define LMO_ACC LT(KBAR_ACC, KC_ENT)
+#define LMO_NAV LT(KBAR_NAV, KC_SPC)
+#define LMO_NUM LT(KBAR_NUM, KC_TAB)
+#define LMO_SYM LT(KBAR_SYM, KC_ENT)
+#define LMO_ACC LT(KBAR_ACC, KC_BSPC)
 #define LMO_CTL LT(KBAR_CTL, KC_DEL)
 
 // Operations
@@ -54,52 +54,52 @@ enum __layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [KBAR_BSE] = LAYOUT_planck_mit(
-    KC_GRV,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_NO,
-    KC_NO,    MLG_A,    MLA_S,    MLC_D,    MLS_F,    KC_G,     KC_H,     MRG_J,    MRA_K,    MRC_L,    MRS_C,    KC_QUOT,
-    KC_NO,    KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_NO,
-    KC_NO,    KC_NO,    LMO_FUN,  LMO_NUM,  LMO_NAV,  KC_SPC,             LMO_SYM,  LMO_ACC,  LMO_CTL,  KC_NO,    KC_NO   
+    KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_NO,    KC_NO,    KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
+    MLG_A,    MLA_S,    MLC_D,    MLS_F,    KC_G,     KC_NO,    KC_NO,    KC_H,     MRG_J,    MRA_K,    MRC_L,    MRS_C,
+    KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_NO,    KC_NO,    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,
+    KC_NO,    KC_NO,    LMO_FUN,  LMO_NAV,  LMO_NUM,  KC_NO,              LMO_SYM,  LMO_ACC,  LMO_CTL,  KC_NO,    KC_NO   
 ),
 
 [KBAR_NAV] = LAYOUT_planck_mit(
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_INS,   _______,  KC_PSCR,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  _______,  _______,
-    _______,  KC_UNDO,  KC_CUT,   KC_COPY,  KC_PSTE,  KC_CAPS,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   _______,  _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_INS,   _______,  KC_PSCR,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  _______,
+    KC_UNDO,  KC_CUT,   KC_COPY,  KC_PSTE,  KC_CAPS,  _______,  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   _______,
     _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
 ),
 
 [KBAR_NUM] = LAYOUT_planck_mit(
-    _______,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     _______,
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_4,     KC_5,     KC_6,     _______,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_1,     KC_2,     KC_3,     _______,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,            KC_0,     KC_DOT,   KC_COMM,  _______,  _______   
+    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     _______,  _______,  KC_6,     KC_7,     KC_8,     KC_9,     KC_0,   
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_4,     KC_5,     KC_6,     _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_1,     KC_2,     KC_3,     _______,
+    _______,  _______,  _______,  _______,  _______,  _______,            KC_COMM,  KC_0,     KC_DOT,   _______,  _______   
 ),
 
 [KBAR_FUN] = LAYOUT_planck_mit(
-    _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   _______,
+    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    _______,  _______,  KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10, 
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  KC_F11,  KC_F12,    _______,  _______,  _______,  KC_MS_L,  KC_MS_D,  KC_MS_U,  KC_MS_R,  _______,  _______,
+    KC_F11,  KC_F12,    _______,  _______,  _______,  _______,  _______,  KC_MS_L,  KC_MS_D,  KC_MS_U,  KC_MS_R,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,            KC_BTN1,  KC_BTN2,  KC_BTN3,  _______,  _______   
 ),
 
 [KBAR_SYM] = LAYOUT_planck_mit(
-    _______,  KC_MINS,  KC_PLUS,  KC_EQL,   KC_LCBR,  KC_RCBR,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  KC_CIRC,  KC_DLR,   KC_LABK,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  KC_PIPE,  KC_PERC,  KC_RABK,  KC_LBRC,  KC_RBRC,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_MINS,  KC_PLUS,  KC_EQL,   KC_LCBR,  KC_RCBR,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_CIRC,  KC_DLR,   KC_LABK,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_PIPE,  KC_PERC,  KC_RABK,  KC_LBRC,  KC_RBRC,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  _______,  _______,  _______,  KC_MINS,  _______,            _______,  _______,  _______,  _______,  _______   
 ),
 
 [KBAR_ACC] = LAYOUT_planck_mit(
-    _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  _______,
+    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,
+    KC_GRV,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MINS,  KC_EQL,   KC_QUOT,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
+    _______,  _______,  _______,  KC_MINS,  KC_EQL,  _______,            _______,  _______,  _______,  _______,  _______   
 ),
 
 
 [KBAR_CTL] = LAYOUT_planck_mit(
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_TOG,  RGB_SPD,  RGB_SPI,  RGB_MOD,  _______,
-    _______,  _______,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  RGB_HUI,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_SAD,  RGB_SAI,  _______,  _______,  _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_TOG,  RGB_SPD,  RGB_SPI,  RGB_MOD,
+    _______,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  _______,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  RGB_HUI,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_SAD,  RGB_SAI,  _______,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  QK_BOOT   
 ),
 
