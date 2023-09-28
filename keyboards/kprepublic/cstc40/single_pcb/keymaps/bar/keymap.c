@@ -46,9 +46,9 @@ enum __layers {
 #define LMO_CTL LT(KBAR_CTL, KC_DEL)
 
 // Operations
-#define KC_CUT LCTL(KC_X)
+#define KC_CUT  LCTL(KC_X)
 #define KC_COPY LCTL(KC_C)
-#define KC_PASTE LCTL(K_V)
+#define KC_PSTE LCTL(KC_V)
 #define KC_UNDO LCTL(KC_Z)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
