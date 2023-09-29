@@ -32,15 +32,15 @@ enum __layers {
 #define MLA_S MT(MOD_LALT, KC_S) 
 #define MLC_D MT(MOD_LCTL, KC_D) 
 #define MLS_F MT(MOD_LSFT, KC_F)
-#define MRG_J MT(MOD_RSFT, KC_J) 
-#define MRA_K MT(MOD_RCTL, KC_K) 
-#define MRC_L MT(MOD_LALT, KC_L) 
-#define MRS_C MT(MOD_RGUI, KC_SCLN)
+#define MRS_J MT(MOD_RSFT, KC_J) 
+#define MRC_K MT(MOD_RCTL, KC_K) 
+#define MRA_L MT(MOD_LALT, KC_L) 
+#define MRG_C MT(MOD_RGUI, KC_SCLN)
 
 // Layers
 #define LMO_FUN LT(KBAR_FUN, KC_ESC)
-#define LMO_NAV LT(KBAR_NAV, KC_SPC)
-#define LMO_NUM LT(KBAR_NUM, KC_TAB)
+#define LMO_NAV LT(KBAR_NAV, KC_TAB)
+#define LMO_NUM LT(KBAR_NUM, KC_SPC)
 #define LMO_SYM LT(KBAR_SYM, KC_ENT)
 #define LMO_ACC LT(KBAR_ACC, KC_BSPC)
 #define LMO_CTL LT(KBAR_CTL, KC_DEL)
@@ -55,9 +55,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [KBAR_BSE] = LAYOUT_planck_mit(
     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_NO,    KC_NO,    KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-    MLG_A,    MLA_S,    MLC_D,    MLS_F,    KC_G,     KC_NO,    KC_NO,    KC_H,     MRG_J,    MRA_K,    MRC_L,    MRS_C,
+    MLG_A,    MLA_S,    MLC_D,    MLS_F,    KC_G,     KC_NO,    KC_NO,    KC_H,     MRS_J,    MRC_K,    MRA_L,    MRG_C,
     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_NO,    KC_NO,    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,
-    KC_NO,    KC_NO,    LMO_FUN,  LMO_NAV,  LMO_NUM,  KC_NO,              LMO_SYM,  LMO_ACC,  LMO_CTL,  KC_NO,    KC_NO   
+    KC_NO,    KC_NO,    LMO_FUN,  LMO_NUM,  LMO_NAV,  KC_NO,              LMO_SYM,  LMO_ACC,  LMO_CTL,  KC_NO,    KC_NO   
 ),
 
 [KBAR_NAV] = LAYOUT_planck_mit(
