@@ -51,6 +51,14 @@ enum __layers {
 #define KC_PSTE LCTL(KC_V)
 #define KC_UNDO LCTL(KC_Z)
 
+enum combos {
+    JK_ESC
+};
+const uint16_t PROGMEM jk_combo[] = {MRS_J, MRC_K, COMBO_END};
+combo_t key_combos[] = {
+  [JK_ESC] = COMBO(jk_combo, KC_ESC)
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [KBAR_BSE] = LAYOUT_planck_mit(
@@ -89,11 +97,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [KBAR_ACC] = LAYOUT_planck_mit(
-    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,
-    KC_GRV,   KC_TILD,  KC_CIRC,  KC_QUOT,  KC_DQUO,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    KC_BSLS,  KC_AMPR,  KC_ASTR,  KC_EQL,   KC_PLUS,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_EQL,
+    KC_GRV,   KC_TILD,  KC_CIRC,  KC_LPRN,  KC_LCBR,  _______,  _______,  KC_RCBR,  KC_RPRN,  KC_QUOT,  KC_DQUO,  KC_PLUS,
+    KC_BSLS,  KC_PIPE,  _______,  KC_LBRC,  KC_LABK,  _______,  _______,  KC_RABK,  KC_RBRC,  _______,  _______,  KC_UNDS,
     _______,  _______,  _______,  KC_MINS,  KC_UNDS,  _______,           _______,  _______,  _______,  _______,  _______   
 ),
+
+// [KBAR_ACC] = LAYOUT_planck_mit(
+//     KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_EQL,
+//     KC_GRV,   KC_TILD,  KC_CIRC,  KC_QUOT,  KC_DQUO,  _______,  _______,  KC_RCBR,  KC_RPRN,  _______,  KC_UNDS,  KC_PLUS,
+//     KC_BSLS,  KC_AMPR,  KC_ASTR,  KC_EQL,   KC_PLUS,  _______,  _______,  KC_RABK,  KC_RBRC,  _______,  _______,  _______,
+//     _______,  _______,  _______,  KC_MINS,  KC_UNDS,  _______,           _______,  _______,  _______,  _______,  _______   
+// ),
 
 
 [KBAR_CTL] = LAYOUT_planck_mit(
