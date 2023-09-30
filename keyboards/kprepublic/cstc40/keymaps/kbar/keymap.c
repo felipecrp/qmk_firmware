@@ -90,9 +90,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [KBAR_ACC] = LAYOUT_planck_mit(
     KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,
-    KC_TILD,  KC_GRV,   KC_CIRC,  KC_QUOT,  KC_DQUO,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_GRV,   KC_TILD,  KC_CIRC,  KC_QUOT,  KC_DQUO,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
     KC_BSLS,  KC_AMPR,  KC_ASTR,  KC_EQL,   KC_PLUS,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  _______,  _______,  KC_MINS,  KC_UNDS,   _______,           _______,  _______,  _______,  _______,  _______   
+    _______,  _______,  _______,  KC_MINS,  KC_UNDS,  _______,           _______,  _______,  _______,  _______,  _______   
 ),
 
 
