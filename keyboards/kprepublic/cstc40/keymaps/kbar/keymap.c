@@ -45,7 +45,7 @@ enum __layers {
 #define MT_ENT LT(KBAR_SY2, KC_ENT)
 #define MT_BSPC LT(KBAR_SYM, KC_BSPC)
 #define MT_DEL LT(KBAR_FUN, KC_DEL)
-#define MT_Z LT(KBAR_CTL, KC_DEL)
+#define MT_Z LT(KBAR_CTL, KC_Z)
         
 // Operations
 #define KC_CUT  LCTL(KC_X)
@@ -87,10 +87,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  _______,  _______,  _______,  _______,  _______,            KC_COMM,  KC_0,     KC_DOT,   _______,  _______   
 ),
 
-[KBAR_FUN] = LAYOUT_planck_mit(
-    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    _______,  _______,  KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10, 
+[KBAR_MSE] = LAYOUT_planck_mit(
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, 
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MS_L,  KC_MS_D,  KC_MS_U,  KC_MS_R,  _______,
-    KC_F11,   KC_F12,   _______,  _______,  _______,  _______,  _______,  KC_WH_L,  KC_WH_D,  KC_WH_U,  KC_WH_R,  _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_WH_L,  KC_WH_D,  KC_WH_U,  KC_WH_R,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,            KC_BTN1,  KC_BTN2,  KC_BTN3,  _______,  _______   
 ),
 
@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [KBAR_CTL] = LAYOUT_planck_mit(
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_TOG,  RGB_SPD,  RGB_SPI,  RGB_MOD,
+    _______,  _______,  _______,  _______,  QK_BOOT,  _______,  _______,  _______,  RGB_TOG,  RGB_SPD,  RGB_SPI,  RGB_MOD,
     _______,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  _______,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  RGB_HUI,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_SAD,  RGB_SAI,  _______,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  QK_BOOT   
