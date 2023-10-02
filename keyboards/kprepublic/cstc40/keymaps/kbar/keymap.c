@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_NO,    KC_NO,    KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
     MT_A,     MT_S,     MT_D,     MT_F,     KC_G,     KC_NO,    KC_NO,    KC_H,     MT_J,     MT_K,     MT_L,     MT_SCLN,
     MT_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_NO,    KC_NO,    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,
-    KC_NO,    KC_NO,    MT_ESC,  MT_SPC,    MT_TAB,   KC_NO,              MT_ENT,   MT_BSPC,  MT_DEL,  KC_NO,    KC_NO   
+    KC_NO,    KC_NO,    MT_ESC,  MT_SPC,    MT_TAB,   KC_NO,              MT_ENT,   MT_BSPC,  MT_DEL,   KC_NO,    KC_NO   
 ),
 
 [KBAR_NAV] = LAYOUT_planck_mit(
@@ -95,17 +95,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [KBAR_SYM] = LAYOUT_planck_mit(
-    KC_EXLM,  KC_AT,    KC_HASH,  KC_CIRC,  KC_DLR,   _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_EQL,
-    KC_GRV,   KC_TILD,  KC_QUOT,  KC_LPRN,  KC_LCBR,  _______,  _______,  KC_RCBR,  KC_RPRN,  _______,  _______,  KC_PLUS,
-    KC_BSLS,  KC_PIPE,  KC_DQUO,  KC_LBRC,  KC_LABK,  _______,  _______,  KC_RABK,  KC_RBRC,  _______,  _______,  KC_UNDS,
-    _______,  _______,  _______,  KC_MINS,  KC_UNDS,  _______,            _______,  _______,  _______,  _______,  _______   
+    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_EQL,
+    KC_DQUO,  KC_TILD,  KC_QUOT,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_BSLS,  KC_SLSH,  _______,  KC_LBRC,  KC_RBRC,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    _______,  _______,  _______,  KC_MINS,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
 ),
 
 [KBAR_SY2] = LAYOUT_planck_mit(
     KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_MINS,  KC_EQL,   _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    KC_PERC,  KC_CIRC,  KC_DQUO,  KC_RPRN,  KC_RCBR,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    KC_PIPE,  _______,  _______,  KC_RBRC,  KC_RABK,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
+    KC_PERC,  KC_GRV,   KC_CIRC,  KC_LCBR,  KC_RCBR,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_PIPE,  _______,  KC_PLUS,  KC_LABK,  KC_RABK,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    _______,  _______,  _______,  KC_UNDS,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
 ),
 
 [KBAR_FUN] = LAYOUT_planck_mit(
