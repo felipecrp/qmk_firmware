@@ -82,8 +82,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [KBAR_NUM] = LAYOUT_planck_mit(
     KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     _______,  _______,  KC_6,     KC_7,     KC_8,     KC_9,     KC_0,   
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_PLUS,  KC_4,     KC_5,     KC_6,     KC_EQL,
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MINS,  KC_1,     KC_2,     KC_3,     KC_ASTR,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MINS,  KC_4,     KC_5,     KC_6,     KC_EQL,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_PLUS,  KC_1,     KC_2,     KC_3,     KC_ASTR,
     _______,  _______,  _______,  _______,  _______,  _______,            KC_COMM,  KC_0,     KC_DOT,   _______,  _______   
 ),
 
@@ -95,9 +95,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [KBAR_SYM] = LAYOUT_planck_mit(
-    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_EQL,
+    KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_AMPR,  _______,  _______,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_MINS,  KC_EQL,
     KC_DQUO,  KC_TILD,  KC_QUOT,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    KC_BSLS,  KC_SLSH,  _______,  KC_LBRC,  KC_RBRC,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_BSLS,  _______,  _______,  KC_LBRC,  KC_RBRC,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  _______,  _______,  KC_MINS,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
 ),
 
