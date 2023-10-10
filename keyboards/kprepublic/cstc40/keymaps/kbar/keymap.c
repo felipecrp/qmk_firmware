@@ -24,7 +24,8 @@ enum __layers {
     KBAR_SYM,      // kBar num layer
     KBAR_SY2,     // kBar num layer
     KBAR_FUN,     // kBar num layer
-    KBAR_CTL      // kBar num layer
+    KBAR_CTL,      // kBar num layer
+    KBAR_UTL
 };
 
 // Aliases
@@ -45,7 +46,8 @@ enum __layers {
 #define MT_ENT LT(KBAR_SY2, KC_ENT)
 #define MT_BSPC LT(KBAR_SYM, KC_BSPC)
 #define MT_DEL LT(KBAR_FUN, KC_DEL)
-#define MT_Z LT(KBAR_CTL, KC_Z)
+#define MT_X LT(KBAR_CTL, KC_X)
+#define MT_Z LT(KBAR_UTL, KC_Z)
         
 // Operations
 #define KC_CUT  LCTL(KC_X)
@@ -72,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [KBAR_BSE] = LAYOUT_planck_mit(
     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_NO,    KC_NO,    KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
     MT_A,     MT_S,     MT_D,     MT_F,     KC_G,     KC_NO,    KC_NO,    KC_H,     MT_J,     MT_K,     MT_L,     MT_SCLN,
-    MT_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_NO,    KC_NO,    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,
+    MT_Z,     MT_X,     KC_C,     KC_V,     KC_B,     KC_NO,    KC_NO,    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,
     KC_NO,    KC_NO,    MT_ESC,   MT_SPC,   MT_TAB,   KC_NO,              MT_ENT,   MT_BSPC,  MT_DEL,   KC_NO,    KC_NO   
 ),
 
@@ -124,6 +126,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_SAD,  RGB_SAI,  _______,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
 ),
+
+[KBAR_UTL] = LAYOUT_planck_mit(
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    _______,  KC_CUT,   KC_COPY,  KC_PSTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   
+    _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
+)
 
 // [KBAR_SYM] = LAYOUT_planck_mit(
 //     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
