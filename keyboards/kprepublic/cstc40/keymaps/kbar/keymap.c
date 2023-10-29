@@ -52,9 +52,9 @@ enum __layers {
 #define MT_X LT(KBAR_CTL, KC_X)
 
 // Gaming
-#define MT_GT1 MT(MOD_LCTL, KC_G) 
-#define MT_GT2 LT(KBAR_GA2, KC_SPC)
-#define MT_GT3 MT(MOD_LALT, KC_B) 
+#define MT_GT1 LT(KBAR_GA2, KC_SPC)
+#define MT_GT2 MT(MOD_LSFT, KC_G) 
+#define MT_GT3 MT(MOD_LCTL, KC_B) 
         
 // Operations
 #define KC_CUT  LCTL(KC_X)
@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [KBAR_NUM] = LAYOUT_planck_mit(
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_PLUS,  KC_7,     KC_8,     KC_9,     KC_ASTR,   
+    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     _______,  _______,  KC_PLUS,  KC_7,     KC_8,     KC_9,     KC_ASTR,   
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MINS,  KC_4,     KC_5,     KC_6,     KC_EQL,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_UNDS,  KC_1,     KC_2,     KC_3,     KC_SLSH,
     _______,  _______,  _______,  _______,  _______,  _______,            KC_COMM,  KC_0,     KC_DOT,   _______,  _______   
@@ -145,10 +145,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [KBAR_GAM] = LAYOUT_planck_mit(
-    KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  _______,  MT_GT1,   MT_GT2,   MT_GT3,   _______,            _______,  _______,  _______,  _______,  _______   
+    KC_1,    KC_Q,     KC_W,     KC_E,     KC_R,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_2,    KC_A,     KC_S,     KC_D,     KC_F,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_3,    KC_Z,     KC_X,     KC_C,     KC_V,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    _______, _______,  MT_GT1,   MT_GT2,   MT_GT3,   _______,            _______,  _______,  _______,  _______,  _______   
 ),
 
 [KBAR_GA2] = LAYOUT_planck_mit(
