@@ -25,7 +25,9 @@ enum __layers {
     KBAR_SY2,     // kBar num layer
     KBAR_FUN,     // kBar num layer
     KBAR_CTL,      // kBar num layer
-    KBAR_UTL
+    KBAR_UTL,
+    KBAR_GAM,     // Game Mode
+    KBAR_GA2
 };
 
 // Aliases
@@ -48,6 +50,11 @@ enum __layers {
 #define MT_BSPC LT(KBAR_SYM, KC_BSPC)
 #define MT_DEL LT(KBAR_FUN, KC_DEL)
 #define MT_X LT(KBAR_CTL, KC_X)
+
+// Gaming
+#define MT_GT1 MT(MOD_LCTL, KC_G) 
+#define MT_GT2 LT(KBAR_GA2, KC_SPC)
+#define MT_GT3 MT(MOD_LALT, KC_B) 
         
 // Operations
 #define KC_CUT  LCTL(KC_X)
@@ -60,13 +67,16 @@ enum __layers {
 
 enum combos {
     JK_ESC,
-    FJ_CAPS
+    FJ_CAPS,
+    IOP_GAM
 };
 const uint16_t PROGMEM jk_combo[] = {MT_J, MT_K, COMBO_END};
 const uint16_t PROGMEM fj_combo[] = {MT_F, MT_J, COMBO_END};
+const uint16_t PROGMEM iop_combo[] = {KC_I, KC_O, KC_P, COMBO_END};
 combo_t key_combos[] = {
   [JK_ESC] = COMBO(jk_combo, KC_ESC),
-  [FJ_CAPS] = COMBO(fj_combo, CW_TOGG)
+  [FJ_CAPS] = COMBO(fj_combo, CW_TOGG),
+  [IOP_GAM] = COMBO(iop_combo, TG(KBAR_GAM))
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -132,7 +142,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  KC_CUT,   KC_COPY,  KC_PSTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   
     _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
-)
+),
+
+[KBAR_GAM] = LAYOUT_planck_mit(
+    KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    _______,  _______,  MT_GT1,   MT_GT2,   MT_GT3,   _______,            _______,  _______,  _______,  _______,  _______   
+),
+
+[KBAR_GA2] = LAYOUT_planck_mit(
+    KC_1,     KC_4,     _______,  KC_7,     KC_9,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_2,     _______,  _______,  _______,  KC_0,     _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    KC_3,     KC_5,     KC_6,     KC_8,     KC_ESC,   _______,  _______,  _______,  _______,  _______,  _______,  _______,
+    _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,  _______,  _______,  _______   
+),
 
 // [KBAR_SYM] = LAYOUT_planck_mit(
 //     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
