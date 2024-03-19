@@ -35,22 +35,23 @@ enum __layers {
 // Aliases
 // Home row mod aliases
 #define MT_A MT(MOD_LGUI, KC_A)
-#define MT_S MT(MOD_LALT, KC_S) 
-#define MT_D MT(MOD_LCTL, KC_D) 
+#define MT_S MT(MOD_LALT, KC_S)
+#define MT_D MT(MOD_LCTL, KC_D)
 #define MT_F MT(MOD_LSFT, KC_F)
-#define MT_J MT(MOD_RSFT, KC_J) 
-#define MT_K MT(MOD_RCTL, KC_K) 
-#define MT_L MT(MOD_LALT, KC_L) 
+#define MT_J MT(MOD_RSFT, KC_J)
+#define MT_K MT(MOD_RCTL, KC_K)
+#define MT_L MT(MOD_LALT, KC_L)
 #define MT_SCLN MT(MOD_RGUI, KC_SCLN)
-#define MT_Z MT(MOD_LCTL, KC_Z) // LT(KBAR_UTL, KC_Z)
 
 // Layers
+#define MT_Z LT(KBAR_MSE, KC_Z)
 #define MT_ESC LT(KBAR_MSE, KC_ESC)
 #define MT_SPC LT(KBAR_NUM, KC_SPC)
 #define MT_TAB LT(KBAR_NAV, KC_TAB)
 #define MT_ENT LT(KBAR_SY2, KC_ENT)
 #define MT_BSPC LT(KBAR_SYM, KC_BSPC)
 #define MT_DEL LT(KBAR_FUN, KC_DEL)
+#define MT_SLSH LT(KBAR_FUN, KC_SLSH)
 #define MT_X LT(KBAR_CTL, KC_X)
 #define MO_GA2 MO(KBAR_GA2)
 
@@ -85,25 +86,25 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-[KBAR_BSE] = LAYOUT_split_3x6_3( 
+[KBAR_BSE] = LAYOUT_split_3x6_3(
     KC_NO,    KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_NO,
     KC_NO,    MT_A,     MT_S,     MT_D,     MT_F,     KC_G,     KC_H,     MT_J,     MT_K,     MT_L,     MT_SCLN,  KC_NO,
-    KC_NO,    MT_Z,     MT_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_NO,
-                                  MT_ESC,   MT_SPC,   MT_TAB,   MT_ENT,   MT_BSPC,  MT_DEL   
+    KC_NO,    MT_Z,     MT_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   MT_SLSH,  KC_NO,
+                                  MT_ESC,   MT_SPC,   MT_TAB,   MT_ENT,   MT_BSPC,  MT_DEL
 ),
 
 [KBAR_NAV] = LAYOUT_split_3x6_3(
     _______,  _______,  _______,  _______,  _______,  _______,  KC_INS,   KC_CUT,   KC_COPY,  KC_PSTE,  KC_PSCR,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  _______,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   _______,  _______,
-                                  _______,  _______,  _______,  _______,  MT_DEL,   _______   
+                                  _______,  _______,  _______,  _______,  MT_DEL,   _______
 ),
 
 [KBAR_NUM] = LAYOUT_split_3x6_3(
-    _______,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_PLUS,  KC_7,     KC_8,     KC_9,     KC_ASTR,  _______,  
+    _______,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_PLUS,  KC_7,     KC_8,     KC_9,     KC_ASTR,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,  KC_MINS,  KC_4,     KC_5,     KC_6,     KC_EQL,   _______,
     _______,  _______,  _______,  _______,  _______,  _______,  KC_UNDS,  KC_1,     KC_2,     KC_3,     KC_SLSH,  _______,
-                                  _______,  _______,  _______,  KC_COMM,  KC_0,     KC_DOT   
+                                  _______,  _______,  _______,  KC_COMM,  KC_0,     KC_DOT
 ),
 
 [KBAR_MSE] = LAYOUT_split_3x6_3(
@@ -117,48 +118,48 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //     _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_AMPR,  _______,  _______,  _______,  _______,  _______,  _______,
 //     _______,  KC_PERC,  KC_QUOT,  KC_DQUO,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,
 //     _______,  KC_BSLS,  KC_PIPE,  KC_EQL,   KC_LABK,  KC_RABK,  _______,  _______,  _______,  _______,  _______,  _______,
-//                                   KC_COLN,  KC_MINS,  KC_UNDS,  _______,  _______,  _______   
+//                                   KC_COLN,  KC_MINS,  KC_UNDS,  _______,  _______,  _______
 // ),
 
 // [KBAR_SY2] = LAYOUT_split_3x6_3(
 //     _______,  _______,  KC_CIRC,  _______,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,
 //     _______,  _______,  KC_TILD,  _______,  KC_LCBR,  KC_RCBR,  _______,  _______,  _______,  _______,  _______,  _______,
 //     _______,  _______,  KC_GRV,   KC_CEDIL, KC_LBRC,  KC_RBRC,  _______,  _______,  _______,  _______,  _______,  _______,
-//                                   _______,  MT_ESC,   _______,  _______,  _______,  _______   
+//                                   _______,  MT_ESC,   _______,  _______,  _______,  _______
 // ),
 
 [KBAR_SYM] = LAYOUT_split_3x6_3(
     _______,  _______,  KC_CIRC,  _______,  KC_GRV,   _______,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  _______,  KC_TILD,  KC_DQUO,  KC_QUOT,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  _______,  _______,  KC_CEDIL, _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-                                  _______,  _______,  _______,  _______,  _______,  _______   
+                                  _______,  _______,  _______,  _______,  _______,  _______
 ),
 
 [KBAR_SY2] = LAYOUT_split_3x6_3(
     _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  KC_AMPR,  KC_LABK,  KC_RABK,  KC_LPRN,  KC_RPRN,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  KC_BSLS,  KC_LBRC,  KC_RBRC,  KC_LCBR,  KC_RCBR,  _______,  _______,  _______,  _______,  _______,  _______,
-                                  KC_COLN,  KC_MINS,  KC_EQL,   _______,  _______,  _______   
+                                  KC_COLN,  KC_MINS,  KC_EQL,   _______,  _______,  _______
 ),
 
 [KBAR_FUN] = LAYOUT_split_3x6_3(
     _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    _______,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  KC_F5,    KC_F6,    KC_F7,    KC_F8,    CW_TOGG,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_CAPS,  _______,  _______,  _______,  _______,  _______,  _______,
-                                  _______,  _______,  _______,  _______,  _______,  _______   
+                                  _______,  _______,  _______,  _______,  _______,  _______
 ),
 
 [KBAR_CTL] = LAYOUT_split_3x6_3(
     _______,  _______,  _______,  _______,  _______,  QK_BOOT,  _______,  RGB_TOG,  RGB_SPD,  RGB_SPI,  RGB_MOD,  _______,
     _______,  _______,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  _______,  RGB_VAD,  RGB_VAI,  _______,  RGB_HUI,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  RGB_SAD,  RGB_SAI,  _______,  _______,  _______,
-                                  _______,  _______,  _______,  _______,  _______,  _______   
+                                  _______,  _______,  _______,  _______,  _______,  _______
 ),
 
 [KBAR_UTL] = LAYOUT_split_3x6_3(
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  _______,  KC_CUT,   KC_COPY,  KC_PSTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   
+    _______,  _______,  KC_CUT,   KC_COPY,  KC_PSTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
                                   _______,  _______,  _______,  _______,  _______,  _______
 ),
 
@@ -166,7 +167,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_CAPS,    KC_Q,     KC_W,     KC_E,     KC_R,   KC_T,     KC_Y,     _______,  _______,  _______,  _______,
     _______,  KC_LSFT,    KC_A,     KC_S,     KC_D,     KC_F,   KC_G,     KC_H,     _______,  _______,  _______,  _______,
     _______,  KC_LCTL,    KC_Z,     KC_X,     KC_C,     KC_V,   KC_B,     KC_N,     _______,  _______,  _______,  _______,
-                                    KC_LSFT,  KC_LCTL,  MO_GA2, _______,  _______,  _______   
+                                    KC_LSFT,  KC_LCTL,  MO_GA2, _______,  _______,  _______
 ),
 
 [KBAR_GA2] = LAYOUT_split_3x6_3(
@@ -180,7 +181,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
 //     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
 //     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-//                                   _______,  _______,  _______,  _______,  _______,  _______   
+//                                   _______,  _______,  _______,  _______,  _______,  _______
 // ),
 
 };
