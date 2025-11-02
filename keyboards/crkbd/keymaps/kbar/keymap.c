@@ -29,7 +29,10 @@ enum __layers {
     KBAR_CTL,      // kBar num layer
     KBAR_UTL,
     KBAR_GAM,     // Game Mode
-    KBAR_GA2
+    KBAR_GA2,
+    KBAR_GA3,
+    KBAR_GA4,
+    KBAR_GA5
 };
 
 // Aliases
@@ -54,6 +57,9 @@ enum __layers {
 #define MT_SLSH LT(KBAR_FUN, KC_SLSH)
 #define MT_X LT(KBAR_CTL, KC_X)
 #define MO_GA2 MO(KBAR_GA2)
+#define TG_GA3 TG(KBAR_GA3)
+#define MO_GA4 MO(KBAR_GA4)
+#define LM_GA4 LM(KBAR_GA4, MOD_LSFT)
 
 // Operations
 #define KC_CUT  LCTL(KC_X)
@@ -165,7 +171,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [KBAR_GAM] = LAYOUT_split_3x6_3(
     _______,  KC_CAPS,    KC_Q,     KC_W,     KC_E,     KC_R,   KC_T,     KC_Y,     _______,  _______,  _______,  _______,
-    _______,  KC_LSFT,    KC_A,     KC_S,     KC_D,     KC_F,   KC_G,     KC_H,     _______,  _______,  _______,  _______,
+    _______,  KC_LSFT,    KC_A,     KC_S,     KC_D,     KC_F,   KC_G,     KC_H,     _______,  _______,  TG_GA3,   _______,
     _______,  KC_LCTL,    KC_Z,     KC_X,     KC_C,     KC_V,   KC_B,     KC_N,     _______,  _______,  _______,  _______,
                                     KC_LSFT,  KC_LCTL,  MO_GA2, _______,  _______,  _______
 ),
@@ -174,6 +180,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_1,     KC_2,     _______,  KC_3,     KC_4,     _______,  _______,  _______,  _______,  _______,  _______,
     _______,  KC_5,     _______,  _______,  _______,  KC_6,     _______,  _______,  _______,  _______,  _______,  _______,
     _______,  KC_TAB,   KC_8,     KC_9,     KC_B,     KC_ESC,   _______,  _______,  _______,  _______,  _______,  _______,
+                                  _______,  _______,  _______,  _______,  _______,  _______
+),
+
+[KBAR_GA3] = LAYOUT_split_3x6_3(
+    _______,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,  KC_U,  _______,  _______,  _______, _______,
+    _______,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,  MT_J,  _______,  _______,  _______, _______,
+    _______,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,  KC_M,  _______,  _______,  _______, _______,
+                                  KC_ESC,   MO_GA4,   LM_GA4,   _______,  _______,  _______
+),
+
+[KBAR_GA4] = LAYOUT_split_3x6_3(
+    _______,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     _______,  _______,  _______,  _______,  _______, _______,
+    _______,  KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     _______,  _______,  _______,  _______,  _______, _______,
+    _______,  KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_BSLS,   _______,  _______,  _______,  _______,  _______, _______,
                                   _______,  _______,  _______,  _______,  _______,  _______
 ),
 
